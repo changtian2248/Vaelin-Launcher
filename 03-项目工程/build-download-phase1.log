@@ -1,0 +1,195 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.8.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :app
+WARNING: The option setting 'android.overridePathCheck=true' is experimental.
+The current default is 'false'.
+Add android.sync.suppressAgpWarnings=UNSUPPORTED_PROJECT_OPTION_USE to the gradle.properties file to suppress this warning.
+
+> Task :app:preBuild UP-TO-DATE
+> Task :startup-core:preBuild UP-TO-DATE
+> Task :lab-api:preBuild UP-TO-DATE
+> Task :startup-core:preDebugBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :lab-api:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :lab-api:processDebugNavigationResources
+> Task :startup-core:processDebugNavigationResources
+> Task :app:generateDebugResources
+> Task :startup-core:generateDebugResources
+> Task :lab-api:generateDebugResources
+> Task :app:packageDebugResources
+> Task :lab-api:packageDebugResources
+> Task :startup-core:packageDebugResources
+> Task :startup-core:generateDebugAssets UP-TO-DATE
+> Task :lab-api:generateDebugAssets UP-TO-DATE
+> Task :startup-core:javaPreCompileDebug
+> Task :lab-api:javaPreCompileDebug
+> Task :lab-api:mergeDebugAssets
+> Task :startup-core:mergeDebugAssets
+> Task :lab-api:writeDebugAarMetadata
+> Task :startup-core:writeDebugAarMetadata
+> Task :lab-api:extractDeepLinksDebug
+> Task :startup-core:extractDeepLinksDebug
+> Task :lab-api:mapDebugSourceSetPaths
+> Task :startup-core:mapDebugSourceSetPaths
+> Task :lab-api:parseDebugLocalResources
+> Task :startup-core:parseDebugLocalResources
+> Task :lab-api:compileDebugLibraryResources
+> Task :startup-core:compileDebugLibraryResources
+> Task :lab-api:mergeDebugJniLibFolders
+> Task :lab-api:mergeDebugNativeLibs NO-SOURCE
+> Task :lab-api:copyDebugJniLibsProjectOnly
+> Task :lab-api:generateDebugRFile
+> Task :startup-core:processDebugManifest
+> Task :lab-api:processDebugManifest
+> Task :app:processDebugNavigationResources
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:javaPreCompileDebug
+> Task :app:parseDebugLocalResources
+> Task :app:mergeDebugAssets
+> Task :app:generateDebugRFile
+> Task :startup-core:configureCMakeDebug[arm64-v8a]
+> Task :startup-core:generateDebugRFile
+
+> Task :startup-core:buildCMakeDebug[arm64-v8a]
+C/C++: ninja: Entering directory `C:\Users\Administrator\Desktop\Vaelin Launcher\03-��Ŀ����\startup-core\.cxx\Debug\504j1e3s\arm64-v8a'
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/ctxbridges/gl_bridge.c:122:65: warning: format specifies type 'void *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+C/C++:   122 |         if (!bindResult) printf("EGLBridge: bind failed: %p\n", eglGetError_p());
+C/C++:       |                                                          ~~     ^~~~~~~~~~~~~~~
+C/C++:       |                                                          %d
+C/C++: 1 warning generated.
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/ctxbridges/virgl_bridge.c:59:71: warning: format specifies type 'void *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+C/C++:    59 |             printf("EGLBridge: Error: eglMakeCurrent() failed: %p\n", eglGetError_p());
+C/C++:       |                                                                ~~     ^~~~~~~~~~~~~~~
+C/C++:       |                                                                %d
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/ctxbridges/virgl_bridge.c:65:25: warning: passing 'const char *[5]' to parameter of type 'char **' discards qualifiers in nested pointer types [-Wincompatible-pointer-types-discards-qualifiers]
+C/C++:    65 |         vtest_main_p(3, (const char*[]){"vtest", "--no-loop-or-fork", "--use-gles", NULL, NULL});
+C/C++:       |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/ctxbridges/virgl_bridge.c:69:1: warning: non-void function does not return a value in all control paths [-Wreturn-type]
+C/C++:    69 | }
+C/C++:       | ^
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/ctxbridges/virgl_bridge.c:101:76: warning: format specifies type 'void *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+C/C++:   101 |             printf("EGLBridge: Error eglGetDefaultDisplay() failed: %p\n", eglGetError_p());
+C/C++:       |                                                                     ~~     ^~~~~~~~~~~~~~~
+C/C++:       |                                                                     %d
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/ctxbridges/virgl_bridge.c:109:65: warning: format specifies type 'char *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+C/C++:   109 |         printf("EGLBridge: Error eglInitialize() failed: %s\n", eglGetError_p());
+C/C++:       |                                                          ~~     ^~~~~~~~~~~~~~~
+C/C++:       |                                                          %d
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/ctxbridges/virgl_bridge.c:129:76: warning: format specifies type 'char *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+C/C++:   129 |         printf("EGLBridge: Error couldn't get an EGL visual config: %s\n", eglGetError_p());
+C/C++:       |                                                                     ~~     ^~~~~~~~~~~~~~~
+C/C++:       |                                                                     %d
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/ctxbridges/virgl_bridge.c:138:70: warning: format specifies type 'char *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+C/C++:   138 |         printf("EGLBridge: Error eglGetConfigAttrib() failed: %s\n", eglGetError_p());
+C/C++:       |                                                               ~~     ^~~~~~~~~~~~~~~
+C/C++:       |                                                               %d
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/ctxbridges/virgl_bridge.c:150:72: warning: format specifies type 'void *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+C/C++:   150 |         printf("EGLBridge: Error eglCreateWindowSurface failed: %p\n", eglGetError_p());
+C/C++:       |                                                                 ~~     ^~~~~~~~~~~~~~~
+C/C++:       |                                                                 %d
+C/C++: 8 warnings generated.
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/ctxbridges/swap_interval_no_egl.c:238:29: warning: format specifies type 'int' but the argument has type 'unsigned long' [-Wformat]
+C/C++:   237 |         __android_log_print(ANDROID_LOG_WARN, "SwapIntervalNoEGL", "ANativeWindow version does not match. Expected %i, got %i",
+C/C++:       |                                                                                                                    ~~
+C/C++:       |                                                                                                                    %lu
+C/C++:   238 |                             sizeof(struct ANativeWindow_real), nativeWindowReal->common.version);
+C/C++:       |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++: 1 warning generated.
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/jre_launcher.c:134:69: warning: format specifies type 'int' but the argument has type 'size_t' (aka 'unsigned long') [-Wformat]
+C/C++:   134 |             printf("Failed to set signal hander for signal %i: %s", i, strerror(errno));
+C/C++:       |                                                            ~~       ^
+C/C++:       |                                                            %zu
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/jre_launcher.c:211:37: warning: passing 'char **' to parameter of type 'const char **' discards qualifiers in nested pointer types [-Wincompatible-pointer-types-discards-qualifiers]
+C/C++:   211 |     free_char_array(env, argsArray, argv);
+C/C++:       |                                     ^~~~
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/utils.h:41:75: note: passing argument to parameter 'charArray' here
+C/C++:    41 | void free_char_array(JNIEnv *env, jobjectArray jstringArray, const char **charArray);
+C/C++:       |                                                                           ^
+C/C++: 2 warnings generated.
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/utils.c:99:33: warning: passing 'const char *' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+C/C++:    99 |         android_update_LD_LIBRARY_PATH(ldLibPathUtf);
+C/C++:       |                                        ^~~~~~~~~~~~
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/utils.c:144:46: warning: incompatible pointer types passing 'void **' to parameter of type 'JNIEnv **' (aka 'const struct JNINativeInterface ***') [-Wincompatible-pointer-types]
+C/C++:   144 |         if ((*jvm)->AttachCurrentThread(jvm, (void**)&env, NULL) == JNI_OK) {
+C/C++:       |                                              ^~~~~~~~~~~~
+C/C++: 2 warnings generated.
+
+> Task :startup-core:mergeDebugJniLibFolders
+> Task :startup-core:preDebugUnitTestBuild UP-TO-DATE
+> Task :startup-core:javaPreCompileDebugUnitTest
+> Task :startup-core:mergeDebugNativeLibs
+> Task :startup-core:generateDebugUnitTestStubRFile
+> Task :startup-core:copyDebugJniLibsProjectOnly
+> Task :app:generateDebugGlobalSynthetics
+> Task :app:desugarDebugFileDependencies
+> Task :app:mapDebugSourceSetPaths
+> Task :app:checkDebugAarMetadata
+> Task :app:checkDebugDuplicateClasses
+> Task :app:compileDebugNavigationResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :app:compressDebugAssets
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:mergeDebugJniLibFolders
+> Task :app:validateSigningDebug
+> Task :app:processDebugManifestForPackage
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:mergeDebugResources
+> Task :lab-api:compileDebugKotlin
+> Task :app:mergeDebugNativeLibs
+
+> Task :app:stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libEGL_mesa.so, libOSMesa_2121.so, libOSMesa_2300d.so, libOSMesa_8.so, libandroidx.graphics.path.so, libawt_xawt.so, libbytehook.so, libc++_shared.so, libcutils.so, libdriver_helper.so, libexithook.so, libflite.so, libfliteWrapper.so, libflite_cmu_us_kal16.so, libgl4es_114.so, libglapi.so, libglxshim.so, libjsound.so, liblinkerhook.so, libmobileglues.so, libng_gl4es.so, libopenal.so, libpojavexec.so, libpojavexec_awt.so, libvulkan_check.so. Run with --info option to learn more.
+
+> Task :app:processDebugResources
+> Task :startup-core:compileDebugKotlin
+> Task :lab-api:compileDebugJavaWithJavac NO-SOURCE
+> Task :lab-api:bundleLibCompileToJarDebug
+> Task :lab-api:compressDebugJavaRes
+> Task :lab-api:bundleLibRuntimeToDirDebug
+> Task :app:mergeExtDexDebug
+
+> Task :startup-core:compileDebugKotlin
+w: file:///C:/Users/Administrator/Desktop/Vaelin%20Launcher/03-项目工程/startup-core/src/main/java/com/vaelin/startup/launch/LaunchCoordinator.kt:293:38 Unnecessary safe call on a non-null receiver of type 'Artifact'.
+w: file:///C:/Users/Administrator/Desktop/Vaelin%20Launcher/03-项目工程/startup-core/src/main/java/com/vaelin/startup/launch/LaunchCoordinator.kt:294:38 Unnecessary safe call on a non-null receiver of type 'Artifact'.
+
+> Task :startup-core:compileDebugJavaWithJavac
+> Task :startup-core:compressDebugJavaRes
+> Task :startup-core:bundleLibCompileToJarDebug
+> Task :startup-core:bundleLibRuntimeToJarDebug
+> Task :startup-core:bundleLibRuntimeToDirDebug
+> Task :app:mergeLibDexDebug
+> Task :app:compileDebugKotlin
+> Task :app:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:compressDebugJavaRes
+> Task :startup-core:compileDebugUnitTestKotlin
+> Task :app:mergeDebugJavaResource
+
+> Task :startup-core:compileDebugUnitTestKotlin
+w: file:///C:/Users/Administrator/Desktop/Vaelin%20Launcher/03-项目工程/startup-core/src/test/java/com/vaelin/startup/launch/LaunchCoordinatorTest.kt:236:39 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'File?'.
+w: file:///C:/Users/Administrator/Desktop/Vaelin%20Launcher/03-项目工程/startup-core/src/test/java/com/vaelin/startup/launch/LaunchCoordinatorTest.kt:237:37 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'File?'.
+w: file:///C:/Users/Administrator/Desktop/Vaelin%20Launcher/03-项目工程/startup-core/src/test/java/com/vaelin/startup/launch/LaunchCoordinatorTest.kt:342:79 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'File?'.
+w: file:///C:/Users/Administrator/Desktop/Vaelin%20Launcher/03-项目工程/startup-core/src/test/java/com/vaelin/startup/launch/LaunchCoordinatorTest.kt:344:22 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'File?'.
+w: file:///C:/Users/Administrator/Desktop/Vaelin%20Launcher/03-项目工程/startup-core/src/test/java/com/vaelin/startup/launch/LaunchCoordinatorTest.kt:346:55 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'File?'.
+w: file:///C:/Users/Administrator/Desktop/Vaelin%20Launcher/03-项目工程/startup-core/src/test/java/com/vaelin/startup/launch/LaunchCoordinatorTest.kt:348:22 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'File?'.
+w: file:///C:/Users/Administrator/Desktop/Vaelin%20Launcher/03-项目工程/startup-core/src/test/java/com/vaelin/startup/launch/LaunchCoordinatorTest.kt:361:35 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'File?'.
+
+> Task :app:dexBuilderDebug
+> Task :app:mergeProjectDexDebug
+> Task :startup-core:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :startup-core:compressDebugUnitTestJavaRes
+> Task :startup-core:extractDebugUnitTestJavaRes
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
+> Task :startup-core:testDebugUnitTest
+
+[Incubating] Problems report is available at: file:///C:/Users/Administrator/Desktop/Vaelin%20Launcher/03-%E9%A1%B9%E7%9B%AE%E5%B7%A5%E7%A8%8B/build/reports/problems/problems-report.html
+
+BUILD SUCCESSFUL in 2m 18s
+83 actionable tasks: 83 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html

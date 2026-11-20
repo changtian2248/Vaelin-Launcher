@@ -1,0 +1,22 @@
+{
+    "formatVersion": 1,
+    "component": "components/caciocavallo17",
+    "algorithm": "SHA-1",
+    "files": [
+        {
+            "path": "cacio-agent.jar",
+            "size": 5480,
+            "sha1": "e96c6f855b0cb8c088264f00fe71061559a952a5"
+        },
+        {
+            "path": "cacio-shared-1.19.1-SNAPSHOT.jar",
+            "size": 106230,
+            "sha1": "e711d69e047e4d045b4186660ee06c124242cc7a"
+        },
+        {
+            "path": "cacio-tta-1.19.1-SNAPSHOT.jar",
+            "size": 52825,
+            "sha1": "129288bb5d710272cdf86b478a077d9d98a094a9"
+        }
+    ]
+}

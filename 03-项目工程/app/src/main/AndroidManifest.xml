@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 下载版本清单 / 游戏库 / 资源对象、以及后续账号登录全部走 HTTPS。
+         缺这一条时 HttpURLConnection 在建连阶段就抛
+         SecurityException: Permission denied (missing INTERNET permission?)，
+         表现是「点了启动什么都没发生」——下载编排本身没问题，是系统在门口拦下了。 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 判断当前是否有网，用于在无网时给出可读提示而不是抛原始异常 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- :game 前台服务保活所需；specialUse 类型是 targetSdk 34 的强制要求 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <!-- Android 13+ 前台服务通知可见所需 -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Android 11（API 30）起包可见性受限：不声明 queries 时 queryIntentActivities
+         只能看到本应用自己，T1.12 的插件包扫描会恒返回空列表。
+         PluginPackageSource.kt 的四类插件发现（DRIVER / RENDERER / RENDERER_V2 / NATIVES）
+         全部依赖这条声明，缺了就是「插件装了但列表里永远不出现」。 -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+        </intent>
+    </queries>
+
+    <application
+        android:label="Vaelin"
+        android:theme="@android:style/Theme.Material.Light.NoActionBar"
+        android:supportsRtl="true"
+        android:allowNativeHeapPointerTagging="false">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout|keyboard|navigation|uiMode"
+            android:screenOrientation="sensorLandscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- T1.10b：游戏宿主在独立 :game 进程。
+             configChanges 与 ZL2 AndroidManifest.xml:120-124 一致：自行处理旋转/尺寸，
+             不重建 Activity，否则 TextureView 的 SurfaceTexture 会被销毁重建。 -->
+        <activity
+            android:name=".game.VMActivity"
+            android:process=":game"
+            android:exported="false"
+            android:launchMode="standard"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout|keyboard|navigation" />
+
+        <!-- 主进程的崩溃提示界面；Dialog 主题、代码构建 View（app 无 res 目录）。
+             不声明 process，故运行于主进程，:game 崩溃后仍能显示，不静默黑屏。 -->
+        <activity
+            android:name=".game.GameCrashActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Material.Light.Dialog"
+            android:launchMode="singleTop" />
+
+        <!-- T1.10b：:game 进程的前台服务。specialUse 类型须配套 PROPERTY 说明。
+             与 ZL2 AndroidManifest.xml:171-179 同构。 -->
+        <service
+            android:name=".game.GameService"
+            android:process=":game"
+            android:exported="false"
+            android:enabled="true"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_TYPE"
+                android:value="Running the game engine and maintaining the isolated game process" />
+        </service>
+
+        <!-- 主进程接收 :game 崩溃广播；显式定向（setClassName），故 exported=false 仍可收。
+             :game 与主进程同 UID 同包名，符合非导出组件的访问规则。 -->
+        <receiver
+            android:name=".game.GameCrashReceiver"
+            android:exported="false" />
+    </application>
+
+</manifest>

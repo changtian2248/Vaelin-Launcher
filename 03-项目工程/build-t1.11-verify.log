@@ -1,0 +1,33 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.8.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :app
+WARNING: The option setting 'android.overridePathCheck=true' is experimental.
+The current default is 'false'.
+Add android.sync.suppressAgpWarnings=UNSUPPORTED_PROJECT_OPTION_USE to the gradle.properties file to suppress this warning.
+
+> Task :startup-core:preBuild UP-TO-DATE
+> Task :startup-core:preDebugBuild UP-TO-DATE
+> Task :startup-core:generateDebugResources
+> Task :startup-core:packageDebugResources
+> Task :startup-core:processDebugNavigationResources
+> Task :startup-core:preDebugUnitTestBuild UP-TO-DATE
+> Task :startup-core:javaPreCompileDebug
+> Task :startup-core:javaPreCompileDebugUnitTest
+> Task :startup-core:parseDebugLocalResources
+> Task :startup-core:generateDebugRFile
+> Task :startup-core:generateDebugUnitTestStubRFile
+> Task :startup-core:compileDebugKotlin
+> Task :startup-core:compileDebugJavaWithJavac
+> Task :startup-core:compressDebugJavaRes
+> Task :startup-core:bundleLibCompileToJarDebug
+> Task :startup-core:bundleLibRuntimeToJarDebug
+> Task :startup-core:compileDebugUnitTestKotlin
+> Task :startup-core:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :startup-core:compressDebugUnitTestJavaRes
+> Task :startup-core:extractDebugUnitTestJavaRes
+> Task :startup-core:testDebugUnitTest
+
+BUILD SUCCESSFUL in 59s
+17 actionable tasks: 17 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html

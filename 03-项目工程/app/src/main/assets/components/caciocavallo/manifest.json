@@ -1,0 +1,22 @@
+{
+    "formatVersion": 1,
+    "component": "components/caciocavallo",
+    "algorithm": "SHA-1",
+    "files": [
+        {
+            "path": "ResConfHack.jar",
+            "size": 12329,
+            "sha1": "8e59e2d545c8780f5a2a9c71986a1aaf651ae006"
+        },
+        {
+            "path": "cacio-androidnw-1.10-SNAPSHOT.jar",
+            "size": 45072,
+            "sha1": "f37faf5350c6297e0fbfc4c4ca9d0d735cdfc86a"
+        },
+        {
+            "path": "cacio-shared-1.10-SNAPSHOT.jar",
+            "size": 102755,
+            "sha1": "28a05bfcf4f3dd2e950592845a0d9e0fcb706006"
+        }
+    ]
+}

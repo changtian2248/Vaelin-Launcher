@@ -1,0 +1,166 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.8.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :app
+WARNING: The option setting 'android.overridePathCheck=true' is experimental.
+The current default is 'false'.
+Add android.sync.suppressAgpWarnings=UNSUPPORTED_PROJECT_OPTION_USE to the gradle.properties file to suppress this warning.
+
+> Task :app:preBuild UP-TO-DATE
+> Task :startup-core:preBuild UP-TO-DATE
+> Task :lab-api:preBuild UP-TO-DATE
+> Task :startup-core:preDebugBuild UP-TO-DATE
+> Task :lab-api:preDebugBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :lab-api:processDebugNavigationResources UP-TO-DATE
+> Task :startup-core:processDebugNavigationResources UP-TO-DATE
+> Task :startup-core:generateDebugResources UP-TO-DATE
+> Task :lab-api:generateDebugResources UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :lab-api:packageDebugResources UP-TO-DATE
+> Task :startup-core:packageDebugResources UP-TO-DATE
+> Task :startup-core:parseDebugLocalResources UP-TO-DATE
+> Task :lab-api:parseDebugLocalResources UP-TO-DATE
+> Task :startup-core:generateDebugRFile UP-TO-DATE
+> Task :lab-api:generateDebugRFile UP-TO-DATE
+> Task :app:processDebugNavigationResources UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :app:generateDebugRFile UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:generateDebugGlobalSynthetics UP-TO-DATE
+> Task :lab-api:compileDebugKotlin UP-TO-DATE
+> Task :lab-api:javaPreCompileDebug UP-TO-DATE
+> Task :lab-api:compileDebugJavaWithJavac NO-SOURCE
+> Task :lab-api:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :lab-api:generateDebugAssets UP-TO-DATE
+> Task :lab-api:mergeDebugAssets UP-TO-DATE
+> Task :lab-api:compressDebugJavaRes UP-TO-DATE
+> Task :lab-api:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :app:checkDebugDuplicateClasses UP-TO-DATE
+> Task :lab-api:writeDebugAarMetadata UP-TO-DATE
+> Task :app:desugarDebugFileDependencies UP-TO-DATE
+> Task :lab-api:extractDeepLinksDebug UP-TO-DATE
+> Task :lab-api:processDebugManifest UP-TO-DATE
+> Task :lab-api:mapDebugSourceSetPaths UP-TO-DATE
+> Task :lab-api:compileDebugLibraryResources UP-TO-DATE
+> Task :lab-api:mergeDebugJniLibFolders UP-TO-DATE
+> Task :lab-api:mergeDebugNativeLibs NO-SOURCE
+> Task :lab-api:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :app:mergeExtDexDebug UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app:compileDebugNavigationResources UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :app:mergeDebugJniLibFolders UP-TO-DATE
+> Task :app:validateSigningDebug UP-TO-DATE
+> Task :app:writeDebugAppMetadata UP-TO-DATE
+> Task :app:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :startup-core:javaPreCompileDebug UP-TO-DATE
+> Task :startup-core:generateDebugAssets UP-TO-DATE
+> Task :startup-core:mergeDebugAssets UP-TO-DATE
+> Task :startup-core:writeDebugAarMetadata UP-TO-DATE
+> Task :startup-core:extractDeepLinksDebug UP-TO-DATE
+> Task :startup-core:processDebugManifest UP-TO-DATE
+> Task :startup-core:mapDebugSourceSetPaths UP-TO-DATE
+> Task :startup-core:compileDebugLibraryResources UP-TO-DATE
+> Task :app:mergeDebugAssets UP-TO-DATE
+> Task :app:compressDebugAssets UP-TO-DATE
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:processDebugMainManifest UP-TO-DATE
+> Task :app:processDebugManifest UP-TO-DATE
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+> Task :app:processDebugResources UP-TO-DATE
+> Task :startup-core:configureCMakeDebug[arm64-v8a]
+
+> Task :startup-core:buildCMakeDebug[arm64-v8a]
+C/C++: ninja: Entering directory `C:\Users\Administrator\Desktop\Vaelin Launcher\03-��Ŀ����\startup-core\.cxx\Debug\504j1e3s\arm64-v8a'
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/ctxbridges/gl_bridge.c:122:65: warning: format specifies type 'void *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+C/C++:   122 |         if (!bindResult) printf("EGLBridge: bind failed: %p\n", eglGetError_p());
+C/C++:       |                                                          ~~     ^~~~~~~~~~~~~~~
+C/C++:       |                                                          %d
+C/C++: 1 warning generated.
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/ctxbridges/swap_interval_no_egl.c:238:29: warning: format specifies type 'int' but the argument has type 'unsigned long' [-Wformat]
+C/C++:   237 |         __android_log_print(ANDROID_LOG_WARN, "SwapIntervalNoEGL", "ANativeWindow version does not match. Expected %i, got %i",
+C/C++:       |                                                                                                                    ~~
+C/C++:       |                                                                                                                    %lu
+C/C++:   238 |                             sizeof(struct ANativeWindow_real), nativeWindowReal->common.version);
+C/C++:       |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++: 1 warning generated.
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/jre_launcher.c:118:69: warning: format specifies type 'int' but the argument has type 'size_t' (aka 'unsigned long') [-Wformat]
+C/C++:   118 |             printf("Failed to set signal hander for signal %i: %s", i, strerror(errno));
+C/C++:       |                                                            ~~       ^
+C/C++:       |                                                            %zu
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/jre_launcher.c:190:37: warning: passing 'char **' to parameter of type 'const char **' discards qualifiers in nested pointer types [-Wincompatible-pointer-types-discards-qualifiers]
+C/C++:   190 |     free_char_array(env, argsArray, argv);
+C/C++:       |                                     ^~~~
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/utils.h:41:75: note: passing argument to parameter 'charArray' here
+C/C++:    41 | void free_char_array(JNIEnv *env, jobjectArray jstringArray, const char **charArray);
+C/C++:       |                                                                           ^
+C/C++: 2 warnings generated.
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/utils.c:99:33: warning: passing 'const char *' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+C/C++:    99 |         android_update_LD_LIBRARY_PATH(ldLibPathUtf);
+C/C++:       |                                        ^~~~~~~~~~~~
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/utils.c:144:46: warning: incompatible pointer types passing 'void **' to parameter of type 'JNIEnv **' (aka 'const struct JNINativeInterface ***') [-Wincompatible-pointer-types]
+C/C++:   144 |         if ((*jvm)->AttachCurrentThread(jvm, (void**)&env, NULL) == JNI_OK) {
+C/C++:       |                                              ^~~~~~~~~~~~
+C/C++: 2 warnings generated.
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/ctxbridges/virgl_bridge.c:59:71: warning: format specifies type 'void *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+C/C++:    59 |             printf("EGLBridge: Error: eglMakeCurrent() failed: %p\n", eglGetError_p());
+C/C++:       |                                                                ~~     ^~~~~~~~~~~~~~~
+C/C++:       |                                                                %d
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/ctxbridges/virgl_bridge.c:65:25: warning: passing 'const char *[5]' to parameter of type 'char **' discards qualifiers in nested pointer types [-Wincompatible-pointer-types-discards-qualifiers]
+C/C++:    65 |         vtest_main_p(3, (const char*[]){"vtest", "--no-loop-or-fork", "--use-gles", NULL, NULL});
+C/C++:       |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/ctxbridges/virgl_bridge.c:69:1: warning: non-void function does not return a value in all control paths [-Wreturn-type]
+C/C++:    69 | }
+C/C++:       | ^
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/ctxbridges/virgl_bridge.c:101:76: warning: format specifies type 'void *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+C/C++:   101 |             printf("EGLBridge: Error eglGetDefaultDisplay() failed: %p\n", eglGetError_p());
+C/C++:       |                                                                     ~~     ^~~~~~~~~~~~~~~
+C/C++:       |                                                                     %d
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/ctxbridges/virgl_bridge.c:109:65: warning: format specifies type 'char *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+C/C++:   109 |         printf("EGLBridge: Error eglInitialize() failed: %s\n", eglGetError_p());
+C/C++:       |                                                          ~~     ^~~~~~~~~~~~~~~
+C/C++:       |                                                          %d
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/ctxbridges/virgl_bridge.c:129:76: warning: format specifies type 'char *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+C/C++:   129 |         printf("EGLBridge: Error couldn't get an EGL visual config: %s\n", eglGetError_p());
+C/C++:       |                                                                     ~~     ^~~~~~~~~~~~~~~
+C/C++:       |                                                                     %d
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/ctxbridges/virgl_bridge.c:138:70: warning: format specifies type 'char *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+C/C++:   138 |         printf("EGLBridge: Error eglGetConfigAttrib() failed: %s\n", eglGetError_p());
+C/C++:       |                                                               ~~     ^~~~~~~~~~~~~~~
+C/C++:       |                                                               %d
+C/C++: C:/Users/Administrator/Desktop/Vaelin Launcher/03-项目工程/startup-core/src/main/jni/ctxbridges/virgl_bridge.c:150:72: warning: format specifies type 'void *' but the argument has type 'EGLint' (aka 'int') [-Wformat]
+C/C++:   150 |         printf("EGLBridge: Error eglCreateWindowSurface failed: %p\n", eglGetError_p());
+C/C++:       |                                                                 ~~     ^~~~~~~~~~~~~~~
+C/C++:       |                                                                 %d
+C/C++: 8 warnings generated.
+
+> Task :startup-core:mergeDebugJniLibFolders UP-TO-DATE
+> Task :startup-core:mergeDebugNativeLibs UP-TO-DATE
+> Task :startup-core:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :app:mergeDebugNativeLibs UP-TO-DATE
+> Task :app:stripDebugDebugSymbols UP-TO-DATE
+> Task :startup-core:compileDebugKotlin
+> Task :startup-core:compileDebugJavaWithJavac UP-TO-DATE
+> Task :startup-core:compressDebugJavaRes UP-TO-DATE
+> Task :startup-core:bundleLibRuntimeToDirDebug
+> Task :startup-core:bundleLibCompileToJarDebug
+> Task :app:compileDebugKotlin
+> Task :app:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:compressDebugJavaRes UP-TO-DATE
+> Task :app:dexBuilderDebug UP-TO-DATE
+> Task :app:mergeProjectDexDebug UP-TO-DATE
+> Task :app:mergeDebugJavaResource
+> Task :app:mergeLibDexDebug
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect UP-TO-DATE
+> Task :app:assembleDebug
+
+BUILD SUCCESSFUL in 1m 4s
+76 actionable tasks: 9 executed, 67 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html

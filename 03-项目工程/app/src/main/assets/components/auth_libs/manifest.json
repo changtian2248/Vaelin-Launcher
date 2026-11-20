@@ -1,0 +1,17 @@
+{
+    "formatVersion": 1,
+    "component": "components/auth_libs",
+    "algorithm": "SHA-1",
+    "files": [
+        {
+            "path": "authlib-injector.jar",
+            "size": 349681,
+            "sha1": "0e0e66d8a4f91a26f33b9c09f5cdffce4a11f0b8"
+        },
+        {
+            "path": "nide8auth.jar",
+            "size": 183804,
+            "sha1": "ceac742d5a7b6eed02765eb8b0786729eea19c7c"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Android 14 (targetSdk 34) 前台服务：普通权限 + specialUse 专用权限 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application>
+        <!--
+          :jvm 独立进程专跑 Forge/NeoForge installer jar（下载/安装阶段），
+          不是游戏运行进程；游戏 JVM 在 :game 由另一 Agent 负责。
+          foregroundServiceType=specialUse + property 是 Android 14 的硬性要求，
+          与 JvmService.postNotification() 的三参 startForeground 对齐。
+        -->
+        <service
+            android:name="com.vaelin.startup.jvm.JvmService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="specialUse"
+            android:process=":jvm">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_TYPE"
+                android:value="Run Java Virtual Machine for installer tasks (Forge/NeoForge)" />
+        </service>
+    </application>
+
+</manifest>

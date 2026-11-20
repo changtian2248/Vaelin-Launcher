@@ -1,0 +1,27 @@
+{
+    "formatVersion": 1,
+    "component": "components/launcher",
+    "algorithm": "SHA-1",
+    "files": [
+        {
+            "path": "HMCLTransformerDiscoveryService-1.0.jar",
+            "size": 2243,
+            "sha1": "4e959b224932fff5ca0bf48f7b74e283b9494d3a"
+        },
+        {
+            "path": "MioLaunchWrapper.jar",
+            "size": 2103,
+            "sha1": "28080d0abd53871a5c074143b65401a13d29339e"
+        },
+        {
+            "path": "MioLibPatcher.jar",
+            "size": 816423,
+            "sha1": "bf4383e135fcfdd5e63388bc57ad8dcdd1516058"
+        },
+        {
+            "path": "forge_installer.jar",
+            "size": 3222,
+            "sha1": "c69ec5c52aa0fa63efd74f593e2f26fc7b78909d"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.8.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :app
+WARNING: The option setting 'android.overridePathCheck=true' is experimental.
+The current default is 'false'.
+Add android.sync.suppressAgpWarnings=UNSUPPORTED_PROJECT_OPTION_USE to the gradle.properties file to suppress this warning.
+
+> Task :startup-core:preBuild UP-TO-DATE
+> Task :startup-core:preDebugBuild UP-TO-DATE
+> Task :startup-core:generateDebugResources
+> Task :startup-core:packageDebugResources
+> Task :startup-core:processDebugNavigationResources
+> Task :startup-core:preDebugUnitTestBuild UP-TO-DATE
+> Task :startup-core:javaPreCompileDebug
+> Task :startup-core:javaPreCompileDebugUnitTest
+> Task :startup-core:parseDebugLocalResources
+> Task :startup-core:generateDebugRFile
+> Task :startup-core:generateDebugUnitTestStubRFile
+
+> Task :startup-core:compileDebugKotlin
+w: file:///C:/Users/Administrator/Desktop/Vaelin%20Launcher/03-项目工程/startup-core/src/main/java/com/vaelin/startup/launch/LaunchCoordinator.kt:293:38 Unnecessary safe call on a non-null receiver of type 'Artifact'.
+w: file:///C:/Users/Administrator/Desktop/Vaelin%20Launcher/03-项目工程/startup-core/src/main/java/com/vaelin/startup/launch/LaunchCoordinator.kt:294:38 Unnecessary safe call on a non-null receiver of type 'Artifact'.
+
+> Task :startup-core:compileDebugJavaWithJavac
+> Task :startup-core:compressDebugJavaRes
+> Task :startup-core:bundleLibRuntimeToJarDebug
+> Task :startup-core:bundleLibCompileToJarDebug
+
+> Task :startup-core:compileDebugUnitTestKotlin
+w: file:///C:/Users/Administrator/Desktop/Vaelin%20Launcher/03-项目工程/startup-core/src/test/java/com/vaelin/startup/launch/LaunchCoordinatorTest.kt:236:39 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'File?'.
+w: file:///C:/Users/Administrator/Desktop/Vaelin%20Launcher/03-项目工程/startup-core/src/test/java/com/vaelin/startup/launch/LaunchCoordinatorTest.kt:237:37 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'File?'.
+w: file:///C:/Users/Administrator/Desktop/Vaelin%20Launcher/03-项目工程/startup-core/src/test/java/com/vaelin/startup/launch/LaunchCoordinatorTest.kt:342:79 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'File?'.
+w: file:///C:/Users/Administrator/Desktop/Vaelin%20Launcher/03-项目工程/startup-core/src/test/java/com/vaelin/startup/launch/LaunchCoordinatorTest.kt:344:22 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'File?'.
+w: file:///C:/Users/Administrator/Desktop/Vaelin%20Launcher/03-项目工程/startup-core/src/test/java/com/vaelin/startup/launch/LaunchCoordinatorTest.kt:346:55 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'File?'.
+w: file:///C:/Users/Administrator/Desktop/Vaelin%20Launcher/03-项目工程/startup-core/src/test/java/com/vaelin/startup/launch/LaunchCoordinatorTest.kt:348:22 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'File?'.
+w: file:///C:/Users/Administrator/Desktop/Vaelin%20Launcher/03-项目工程/startup-core/src/test/java/com/vaelin/startup/launch/LaunchCoordinatorTest.kt:361:35 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'File?'.
+
+> Task :startup-core:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :startup-core:compressDebugUnitTestJavaRes
+> Task :startup-core:extractDebugUnitTestJavaRes
+> Task :startup-core:testDebugUnitTest
+
+[Incubating] Problems report is available at: file:///C:/Users/Administrator/Desktop/Vaelin%20Launcher/03-%E9%A1%B9%E7%9B%AE%E5%B7%A5%E7%A8%8B/build/reports/problems/problems-report.html
+
+BUILD SUCCESSFUL in 57s
+17 actionable tasks: 17 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html
